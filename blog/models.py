@@ -2,5 +2,7 @@ from django.db import models
 
 
 class Blog(models.Model):
-    contents = models.CharField(max_length=1000)
-    summary = models.CharField(max_length=200)
+    title = models.CharField(max_length=20)
+    pub_date = models.DateField()
+    body = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='images/')
